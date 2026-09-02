@@ -67,7 +67,7 @@ export function registerNodeTransport(): boolean {
           body: JSON.stringify({
             // 按调用覆盖（异源反证生成的第二模型），缺省回落默认模型
             model: opts?.model || model,
-            temperature: opts?.temperature ?? 1,
+            temperature: opts?.temperature ?? 1.0,
             max_tokens: adaptiveMax ?? 3000,
             messages,
           }),
